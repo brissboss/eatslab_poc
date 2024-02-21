@@ -1,0 +1,61 @@
+{
+    "type": 1,
+    "textColor": "#356859",
+    "backgroundColor": "#FFFBE6",
+    "menu": {
+        "Boisons": {
+            "1": {
+                "name": "Coca-Cola",
+                "price": 2.5
+            },
+            "2": {
+                "name": "Fanta",
+                "price": 2.5
+            },
+            "3": {
+                "name": "Sprite",
+                "price": 2.5
+            },
+            "4": {
+                "name": "Eau",
+                "price": 2
+            }
+        },
+        "Plats": {
+            "1": {
+                "name": "Pizza Margherita",
+                "price": 8
+            },
+            "2": {
+                "name": "Pizza 4 fromages",
+                "price": 9
+            },
+            "3": {
+                "name": "Pizza 4 saisons",
+                "price": 10
+            },
+            "4": {
+                "name": "Pizza 4 saisons",
+                "price": 10
+            }
+        },
+        "Desserts": {
+            "1": {
+                "name": "Tiramisu",
+                "price": 5
+            },
+            "2": {
+                "name": "Panna Cotta",
+                "price": 5
+            },
+            "3": {
+                "name": "Tarte au citron",
+                "price": 5
+            },
+            "4": {
+                "name": "Tarte aux pommes",
+                "price": 5
+            }
+        }
+    }
+}

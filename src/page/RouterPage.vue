@@ -1,27 +1,25 @@
 <script setup lang="ts">
 import { defineProps, ref, onBeforeMount } from 'vue'
+import TypeOne from './typeOne.vue'
+import testJson from './nomad.json'
 
 const props = defineProps<{
     partner: string
 }>()
 
-const json = ref('')
+const json = ref<any>(null)
+const loading = ref<boolean>(true)
 
-onBeforeMount(() => {
-    fetchJson()
+onBeforeMount(async () => {
+    const test = await fetch(`https://eatslab-partner.vercel.app/${props.partner}.json`)
+    const data = await test.json()
+    json.value = data
+    loading.value = false
 })
 
-function fetchJson() {
-    fetch(`https://github.com/brissboss/eatslab_partner/blob/main/${props.partner}.json`)
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data)
-            json.value = JSON.stringify(data)
-        })
-}
 
 </script>
 
 <template>
-    {{ partner + json }}
+    <TypeOne v-if="!loading && testJson.type === 1" :json="testJson"/>
 </template>
